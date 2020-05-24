@@ -2,39 +2,49 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>当当网</title>
+		<title>工具</title>
 		<style type="text/css">
-			*{
-				margin: 0px;
-				padding: 0px;
+			p .tooltip {
+				color: green;
+				position: relative;
 			}
-			.ddwdiv{
-				width: 350px;
-				height: 200px;
-				background-color: #c4faff;
-				color: #e93e44;
-				text-align: center;
+			P .tooltip::after {
+				content: attr(title);
+				word-break: keep-all;
+				position: absolute;
+				padding: 4px 16px ;
+				color: #fff;
+				background-color: #000000;
+				left: calc(100% + 60px);
+				top: 3px;
+				border: 1px solid black;
+				opacity: 0;
+				transition: all 1s;
 			}
-			strong{
-				color: red;
-				font-size: 28px;
+			p .tooltip:hover::after {
+				opacity: 1;
+				left: calc(100% + 8px);
+			p .tooltip::before {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 10px solid transparent;
+				border-right-color: black;
+				position: absolute;
+				z-index: 2;
+				left: calc(100% + 40px);
+				top: 2px;
+				opacity: 0;
+				transition: all 1s;
 			}
-			p{
-				font-size: 20px;
-				color: #ffaa7f;
+			p .tooltip:hover::before {
+				opacity: 1;
+				left: calc(100% - 11px);
 			}
-			en.{
-				font-family: "blackadder itc";
-			}
-			
-		</style>
+		</style>				
 	</head>
 	<body>
-		<div class="ddwdiv">
-		<h1><strong>当当书香节4.23</h1>
-		<p class="en">4.10-4.23</p>
-		<p>阅读丈量世界</p>
-		<h2>百万图书<strong>每满100减50</h2>
-		</div>
+		<p>去微软问题仍未前往讨伐得瑟一下给确认<span title="哈哈哈" class="tooltip">肥硕</span>飞人，我刚好容易是奥瓦工作规范是方式修改的任何是而感动人的性格如此丰厚的华人，
+		发的<span title="略略略" class="tooltip">共享</span>步伐加快色改变教案或淡紫色发货尽快和身份与哇撒哈哈。</p>
 	</body>
 <ml>
