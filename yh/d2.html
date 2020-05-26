@@ -2,39 +2,49 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>ad</title>
+		<title>工具</title>
 		<style type="text/css">
-			*{
-				margin: 0px;
-				padding: 0px;
+			p .tooltip {
+				color: green;
+				position: relative;
 			}
-			.addiv{
-				width: 350px;
-				height: 200px;
-				background-color: #FAEBD7;
-				color: #4C9372;
-				text-align: center;
-				text-indent: -1em;
+			P .tooltip::after {
+				content: attr(title);
+				word-break: keep-all;
+				position: absolute;
+				padding: 4px 16px ;
+				color: #fff;
+				background-color: #000000;
+				left: calc(100% + 60px);
+				top: 3px;
+				border: 1px solid black;
+				opacity: 0;
+				transition: all 1s;
 			}
-			strong{
-				color: #DAA520;
+			p .tooltip:hover::after {
+				opacity: 1;
+				left: calc(100% + 8px);
+			p .tooltip::before {
+				content: "";
+				width: 0;
+				height: 0;
+				border: 10px solid transparent;
+				border-right-color: black;
+				position: absolute;
+				z-index: 2;
+				left: calc(100% + 40px);
+				top: 2px;
+				opacity: 0;
+				transition: all 1s;
 			}
-			#desc{
-				font-size: 11px;
-				text-indent: 0em;
+			p .tooltip:hover::before {
+				opacity: 1;
+				left: calc(100% - 11px);
 			}
-			.en{
-				font-family: "blackadder itc";
-			}
-	</style>
+		</style>				
 	</head>
 	<body>
-		<div class="addiv">
-		<h1>2020<strong>春装全面上新<></h1>
-		<p class="en">Spring is coming!</p>
-		<p>全场两件<strong>包邮<></p>
-		<p class="en">April 4.1-4.30</p>
-		<p id="desc">所有邂逅相逢，所有萍聚水遇，都在缘分的天空下慢慢演绎...</p>
-		</div>
+		<p>好处就是咖啡和喀什卡激活<span title="陈宇浩" class="tooltip">小蒋</span>发撒回复可见撒谎饭卡上俯瞰击杀空间萨芬就撒娇客户发卡机书法考级·撒就发卡上JFK垃圾
+		<span title="嘻嘻嘻" class="tooltip">共享</span>放假撒看见分厘卡撒酒疯绿卡</p>
 	</body>
 <ml>
